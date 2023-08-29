@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto:wght@100&display=swap');
+@import url("animation.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font: 'Poppins', sans-serif;
+    --second-font: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0rem;
+    gap: 2rem;
+}
+
+#welcomeTitle {
+    font-family: var(--main-font);
+    font-size: 2rem;
+    overflow: hidden;
+    border-right: .15em solid #ffcc00;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: digitando 3.5s steps(40, end), piscando .75s;
+    margin: 1rem 0rem;
+}
+
+#mainMessage {
+    font-family: var(--second-font);
+    font-size: 1rem;
+    margin: 1rem 0rem;
+    color: #e2b502;
+    text-shadow: #00000020 1px 1px 0px;
+}
+
+.card-hub {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    box-shadow: #00000070 2px 2px 4px;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0rem 2rem;
+}
+
+.nav-link {
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--main-font);
+    font-size: 1.5rem;
+    color: #eaeaea;
+    border: #252525 1px solid;
+    background-color: #252525;
+    transition: 0.5s;
+}
+
+.nav-link:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.dayProject {
+    font-family: var(--main-font);
+    font-size: 1rem;
+    margin: 0rem 2rem;
+}
+
+#logoWelcome {
+    height: 10rem;
+    width: 17rem;
+    animation: spin 5s infinite alternate alternate;
+}

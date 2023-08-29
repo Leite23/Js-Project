@@ -1,0 +1,27 @@
+@keyframes digitando {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes piscando {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #ffcc00;
+    }
+}
+@keyframes spin {
+    from,
+    to {
+        transform: rotate(360deg);
+    }
+}
