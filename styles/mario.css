@@ -4,11 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+   background-color: #00ff2a; 
+}
+
 .game-board{
-    width: 100%;
     height: 500px;
-    border-bottom: 15px solid #00ff2a;
-    margin: 0 auto;
     position: relative;
     overflow: hidden;
     background: linear-gradient(#87CEEB, #E0F6FF)
@@ -16,8 +17,8 @@
 
 .pipe{
     position: absolute;
-    bottom: 0;
-    width: 80px;
+    bottom: -10px;
+    width: 100px;
     animation: pipe-animation 1.5s infinite linear; 
 }
 
@@ -36,6 +37,24 @@
 
 .jump{
     animation: jump 500ms ease-out;
+}
+
+#gameover {
+    position: absolute;
+    bottom: 50%;
+    left: 45%;
+    padding: 20px;
+    background: linear-gradient(to left, #b42929, #830e0e);
+    border: none;
+    border-radius: 10px;
+    color: #fafafa;
+    cursor: pointer;
+    transform: translateY(-300px);
+    transition: 1.5s ease-in;
+}
+
+#gameover:hover {
+    background: #bd1010;
 }
 
 @keyframes pipe-animation{

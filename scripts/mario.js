@@ -1,5 +1,6 @@
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
+const gameover = document.querySelector("#gameover")
 
 const jump = () => {
     mario.classList.add('jump');
@@ -28,9 +29,12 @@ const loop = setInterval(() => {
         mario.style.animation = 'none';
         mario.style.bottom = '${marioPosition}px';
 
-        mario.src = '/assets/marioover.png';
+        mario.src = '../assets/marioover.png';
+        mario.style.transition = ".5s"
         mario.style.width = '75px'
         mario.style.marginLeft = '50px'
+        
+        gameover.style.transform= "translateY(0px)"
 
         clearInterval(loop)
 
@@ -39,3 +43,7 @@ const loop = setInterval(() => {
 }, 10);
 
 document.addEventListener('keydown' , jump);
+
+gameover.addEventListener("click", ()=>{
+    location.reload()
+})
